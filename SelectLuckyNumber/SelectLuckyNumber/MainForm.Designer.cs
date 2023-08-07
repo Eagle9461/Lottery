@@ -31,13 +31,13 @@
             tabControl1 = new TabControl();
             tabDataEntry = new TabPage();
             btnSave = new Button();
-            monthCalendar1 = new MonthCalendar();
+            calendar = new MonthCalendar();
             label9 = new Label();
-            comboBox3 = new ComboBox();
+            selDrawingTime = new ComboBox();
             label11 = new Label();
             label10 = new Label();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            selExtraNumberRange = new ComboBox();
+            selNumbersRange = new ComboBox();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
@@ -45,27 +45,25 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            numericUpDown6 = new NumericUpDown();
-            numericUpDown5 = new NumericUpDown();
-            numericUpDown4 = new NumericUpDown();
-            numericUpDown3 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
+            numDataExtra = new NumericUpDown();
+            numData6 = new NumericUpDown();
+            numData5 = new NumericUpDown();
+            numData4 = new NumericUpDown();
+            numData3 = new NumericUpDown();
+            numData2 = new NumericUpDown();
             numData1 = new NumericUpDown();
             label1 = new Label();
             selGameType = new ComboBox();
             tabCalculate = new TabPage();
-            listView1 = new ListView();
-            colDateTime = new ColumnHeader();
-            colNumbers = new ColumnHeader();
+            lstHistory = new ListView();
             tabControl1.SuspendLayout();
             tabDataEntry.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numDataExtra).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numData6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numData5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numData4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numData3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numData2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numData1).BeginInit();
             tabCalculate.SuspendLayout();
             SuspendLayout();
@@ -83,13 +81,13 @@
             // tabDataEntry
             // 
             tabDataEntry.Controls.Add(btnSave);
-            tabDataEntry.Controls.Add(monthCalendar1);
+            tabDataEntry.Controls.Add(calendar);
             tabDataEntry.Controls.Add(label9);
-            tabDataEntry.Controls.Add(comboBox3);
+            tabDataEntry.Controls.Add(selDrawingTime);
             tabDataEntry.Controls.Add(label11);
             tabDataEntry.Controls.Add(label10);
-            tabDataEntry.Controls.Add(comboBox2);
-            tabDataEntry.Controls.Add(comboBox1);
+            tabDataEntry.Controls.Add(selExtraNumberRange);
+            tabDataEntry.Controls.Add(selNumbersRange);
             tabDataEntry.Controls.Add(label8);
             tabDataEntry.Controls.Add(label7);
             tabDataEntry.Controls.Add(label6);
@@ -97,12 +95,12 @@
             tabDataEntry.Controls.Add(label4);
             tabDataEntry.Controls.Add(label3);
             tabDataEntry.Controls.Add(label2);
-            tabDataEntry.Controls.Add(numericUpDown6);
-            tabDataEntry.Controls.Add(numericUpDown5);
-            tabDataEntry.Controls.Add(numericUpDown4);
-            tabDataEntry.Controls.Add(numericUpDown3);
-            tabDataEntry.Controls.Add(numericUpDown2);
-            tabDataEntry.Controls.Add(numericUpDown1);
+            tabDataEntry.Controls.Add(numDataExtra);
+            tabDataEntry.Controls.Add(numData6);
+            tabDataEntry.Controls.Add(numData5);
+            tabDataEntry.Controls.Add(numData4);
+            tabDataEntry.Controls.Add(numData3);
+            tabDataEntry.Controls.Add(numData2);
             tabDataEntry.Controls.Add(numData1);
             tabDataEntry.Controls.Add(label1);
             tabDataEntry.Controls.Add(selGameType);
@@ -122,12 +120,13 @@
             btnSave.TabIndex = 33;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
-            // monthCalendar1
+            // calendar
             // 
-            monthCalendar1.Location = new Point(583, 95);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 32;
+            calendar.Location = new Point(583, 95);
+            calendar.Name = "calendar";
+            calendar.TabIndex = 32;
             // 
             // label9
             // 
@@ -138,13 +137,13 @@
             label9.TabIndex = 31;
             label9.Text = "Drawing Time :";
             // 
-            // comboBox3
+            // selDrawingTime
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(583, 54);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(162, 23);
-            comboBox3.TabIndex = 30;
+            selDrawingTime.FormattingEnabled = true;
+            selDrawingTime.Location = new Point(583, 54);
+            selDrawingTime.Name = "selDrawingTime";
+            selDrawingTime.Size = new Size(162, 23);
+            selDrawingTime.TabIndex = 30;
             // 
             // label11
             // 
@@ -164,21 +163,21 @@
             label10.TabIndex = 28;
             label10.Text = "Numbers Range :";
             // 
-            // comboBox2
+            // selExtraNumberRange
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(228, 229);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(162, 23);
-            comboBox2.TabIndex = 27;
+            selExtraNumberRange.FormattingEnabled = true;
+            selExtraNumberRange.Location = new Point(228, 229);
+            selExtraNumberRange.Name = "selExtraNumberRange";
+            selExtraNumberRange.Size = new Size(162, 23);
+            selExtraNumberRange.TabIndex = 27;
             // 
-            // comboBox1
+            // selNumbersRange
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(47, 229);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(162, 23);
-            comboBox1.TabIndex = 26;
+            selNumbersRange.FormattingEnabled = true;
+            selNumbersRange.Location = new Point(47, 229);
+            selNumbersRange.Name = "selNumbersRange";
+            selNumbersRange.Size = new Size(162, 23);
+            selNumbersRange.TabIndex = 26;
             // 
             // label8
             // 
@@ -243,59 +242,59 @@
             label2.TabIndex = 19;
             label2.Text = "Num 1 :";
             // 
-            // numericUpDown6
+            // numDataExtra
             // 
-            numericUpDown6.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDown6.Location = new Point(466, 121);
-            numericUpDown6.Name = "numericUpDown6";
-            numericUpDown6.Size = new Size(64, 46);
-            numericUpDown6.TabIndex = 18;
-            numericUpDown6.TextAlign = HorizontalAlignment.Center;
+            numDataExtra.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numDataExtra.Location = new Point(466, 121);
+            numDataExtra.Name = "numDataExtra";
+            numDataExtra.Size = new Size(64, 46);
+            numDataExtra.TabIndex = 18;
+            numDataExtra.TextAlign = HorizontalAlignment.Center;
             // 
-            // numericUpDown5
+            // numData6
             // 
-            numericUpDown5.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDown5.Location = new Point(396, 121);
-            numericUpDown5.Name = "numericUpDown5";
-            numericUpDown5.Size = new Size(64, 46);
-            numericUpDown5.TabIndex = 17;
-            numericUpDown5.TextAlign = HorizontalAlignment.Center;
+            numData6.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numData6.Location = new Point(396, 121);
+            numData6.Name = "numData6";
+            numData6.Size = new Size(64, 46);
+            numData6.TabIndex = 17;
+            numData6.TextAlign = HorizontalAlignment.Center;
             // 
-            // numericUpDown4
+            // numData5
             // 
-            numericUpDown4.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDown4.Location = new Point(326, 121);
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(64, 46);
-            numericUpDown4.TabIndex = 16;
-            numericUpDown4.TextAlign = HorizontalAlignment.Center;
+            numData5.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numData5.Location = new Point(326, 121);
+            numData5.Name = "numData5";
+            numData5.Size = new Size(64, 46);
+            numData5.TabIndex = 16;
+            numData5.TextAlign = HorizontalAlignment.Center;
             // 
-            // numericUpDown3
+            // numData4
             // 
-            numericUpDown3.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDown3.Location = new Point(256, 121);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(64, 46);
-            numericUpDown3.TabIndex = 15;
-            numericUpDown3.TextAlign = HorizontalAlignment.Center;
+            numData4.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numData4.Location = new Point(256, 121);
+            numData4.Name = "numData4";
+            numData4.Size = new Size(64, 46);
+            numData4.TabIndex = 15;
+            numData4.TextAlign = HorizontalAlignment.Center;
             // 
-            // numericUpDown2
+            // numData3
             // 
-            numericUpDown2.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDown2.Location = new Point(186, 121);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(64, 46);
-            numericUpDown2.TabIndex = 14;
-            numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            numData3.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numData3.Location = new Point(186, 121);
+            numData3.Name = "numData3";
+            numData3.Size = new Size(64, 46);
+            numData3.TabIndex = 14;
+            numData3.TextAlign = HorizontalAlignment.Center;
             // 
-            // numericUpDown1
+            // numData2
             // 
-            numericUpDown1.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            numericUpDown1.Location = new Point(116, 121);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(64, 46);
-            numericUpDown1.TabIndex = 13;
-            numericUpDown1.TextAlign = HorizontalAlignment.Center;
+            numData2.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            numData2.Location = new Point(116, 121);
+            numData2.Name = "numData2";
+            numData2.Size = new Size(64, 46);
+            numData2.TabIndex = 13;
+            numData2.TextAlign = HorizontalAlignment.Center;
             // 
             // numData1
             // 
@@ -325,7 +324,7 @@
             // 
             // tabCalculate
             // 
-            tabCalculate.Controls.Add(listView1);
+            tabCalculate.Controls.Add(lstHistory);
             tabCalculate.Location = new Point(4, 24);
             tabCalculate.Name = "tabCalculate";
             tabCalculate.Padding = new Padding(3);
@@ -334,22 +333,13 @@
             tabCalculate.Text = "Get Lucky";
             tabCalculate.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lstHistory
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { colDateTime, colNumbers });
-            listView1.Location = new Point(34, 22);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(210, 261);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // colDateTime
-            // 
-            colDateTime.Text = "DateTime";
-            // 
-            // colNumbers
-            // 
-            colNumbers.Text = "Numbers";
+            lstHistory.Location = new Point(34, 22);
+            lstHistory.Name = "lstHistory";
+            lstHistory.Size = new Size(210, 261);
+            lstHistory.TabIndex = 0;
+            lstHistory.UseCompatibleStateImageBehavior = false;
             // 
             // MainForm
             // 
@@ -363,12 +353,12 @@
             tabControl1.ResumeLayout(false);
             tabDataEntry.ResumeLayout(false);
             tabDataEntry.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numDataExtra).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numData6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numData5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numData4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numData3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numData2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numData1).EndInit();
             tabCalculate.ResumeLayout(false);
             ResumeLayout(false);
@@ -379,13 +369,13 @@
         private TabControl tabControl1;
         private TabPage tabDataEntry;
         private Button btnSave;
-        private MonthCalendar monthCalendar1;
+        private MonthCalendar calendar;
         private Label label9;
-        private ComboBox comboBox3;
+        private ComboBox selDrawingTime;
         private Label label11;
         private Label label10;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox selExtraNumberRange;
+        private ComboBox selNumbersRange;
         private Label label8;
         private Label label7;
         private Label label6;
@@ -393,18 +383,16 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private NumericUpDown numericUpDown6;
-        private NumericUpDown numericUpDown5;
-        private NumericUpDown numericUpDown4;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numDataExtra;
+        private NumericUpDown numData6;
+        private NumericUpDown numData5;
+        private NumericUpDown numData4;
+        private NumericUpDown numData3;
+        private NumericUpDown numData2;
         private NumericUpDown numData1;
         private Label label1;
         private ComboBox selGameType;
         private TabPage tabCalculate;
-        private ListView listView1;
-        private ColumnHeader colDateTime;
-        private ColumnHeader colNumbers;
+        private ListView lstHistory;
     }
 }
