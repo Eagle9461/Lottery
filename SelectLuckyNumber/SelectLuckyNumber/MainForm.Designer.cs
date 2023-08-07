@@ -335,9 +335,9 @@
             // 
             // lstHistory
             // 
-            lstHistory.Location = new Point(34, 22);
+            lstHistory.Location = new Point(21, 37);
             lstHistory.Name = "lstHistory";
-            lstHistory.Size = new Size(210, 261);
+            lstHistory.Size = new Size(286, 261);
             lstHistory.TabIndex = 0;
             lstHistory.UseCompatibleStateImageBehavior = false;
             // 

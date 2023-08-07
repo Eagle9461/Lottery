@@ -42,11 +42,37 @@ namespace SelectLuckyNumber
         private void btnSave_Click(object sender, EventArgs e)
         {
             OneData newData = new OneData();
+            int[] numbers = new int[6];
+            numbers[0] = (int)numData1.Value;
+            numbers[1] = (int)numData2.Value;
+            numbers[2] = (int)numData3.Value;
+            numbers[3] = (int)numData4.Value;
+            numbers[4] = (int)numData5.Value;
+            numbers[5] = (int)numData6.Value;
 
+            newData.SetGameType((GameType)selGameType.SelectedIndex);
             newData.SetDateTime(DateTime.Now);
             newData.SetExtraTime((ExtraTime)selDrawingTime.SelectedIndex);
-            MessageBox.Show(newData.GetExtraTime().ToString());
-           
+            newData.SetNumbers(numbers);
+            newData.setExtraNumber((int) numDataExtra.Value);
+
+            saveToFile(newData);
+            //MessageBox.Show(newData.GetNumbers()[3].ToString());
+        }
+        private void saveToFile(OneData newData)
+        {
+            string folder = @"./";
+            // Filename
+            string fileName = "Data.txt";
+            // Fullpath. You can direct hardcode it if you like.
+            string fullPath = folder + fileName;
+            // An array of strings
+            // Write array of strings to a file using WriteAllLines.
+            // If the file does not exists, it will create a new file.
+            // This method automatically opens the file, writes to it, and closes file
+            // Read a file
+            string readText = File.ReadAllText(fullPath);
+            File.WriteAllText(fullPath, readText+"\n"+newData.convertToString());
         }
     }
 }
