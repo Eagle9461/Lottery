@@ -1,0 +1,17 @@
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\bin\Debug\net6.0-windows\SelectLuckyNumber.exe
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\bin\Debug\net6.0-windows\SelectLuckyNumber.deps.json
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\bin\Debug\net6.0-windows\SelectLuckyNumber.runtimeconfig.json
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\bin\Debug\net6.0-windows\SelectLuckyNumber.dll
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\bin\Debug\net6.0-windows\SelectLuckyNumber.pdb
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.MainForm.resources
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.dll
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\refint\SelectLuckyNumber.dll
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.pdb
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\SelectLuckyNumber.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\SelectLuckyNumber\SelectLuckyNumber\obj\Debug\net6.0-windows\ref\SelectLuckyNumber.dll
