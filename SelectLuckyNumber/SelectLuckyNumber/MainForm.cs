@@ -2,6 +2,9 @@ namespace SelectLuckyNumber
 {
     public partial class MainForm : Form
     {
+        public static string filePath = @"./Data.txt";
+
+        private List<OneData> history = new List<OneData> { };
         public MainForm()
         {
             InitializeComponent();
@@ -54,25 +57,47 @@ namespace SelectLuckyNumber
             newData.SetDateTime(DateTime.Now);
             newData.SetExtraTime((ExtraTime)selDrawingTime.SelectedIndex);
             newData.SetNumbers(numbers);
-            newData.setExtraNumber((int) numDataExtra.Value);
+            newData.SetExtraNumber((int)numDataExtra.Value);
 
             saveToFile(newData);
             //MessageBox.Show(newData.GetNumbers()[3].ToString());
         }
         private void saveToFile(OneData newData)
         {
-            string folder = @"./";
-            // Filename
-            string fileName = "Data.txt";
-            // Fullpath. You can direct hardcode it if you like.
-            string fullPath = folder + fileName;
-            // An array of strings
-            // Write array of strings to a file using WriteAllLines.
-            // If the file does not exists, it will create a new file.
-            // This method automatically opens the file, writes to it, and closes file
-            // Read a file
-            string readText = File.ReadAllText(fullPath);
-            File.WriteAllText(fullPath, readText+"\n"+newData.convertToString());
+            string readText = File.ReadAllText(filePath);
+
+            File.WriteAllText(filePath, readText + "\n" + newData.ConvertToString());
+        }
+        private void readFromFile()
+        {
+            if(!File.Exists(filePath)) { return; }
+            string readText = File.ReadAllText(filePath);
+
+            string[] datas = readText.Split('\n');
+            foreach (string data in datas)
+            {
+                if (data == "") continue;
+                OneData oneData = new OneData();
+                oneData.SetDataFromString(data);
+                history.Add(oneData);
+            }
+        }
+
+        private void tabPane_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabPane.SelectedIndex == 1)
+            {
+                readFromFile();
+
+                foreach (OneData one in history)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = one.GetDateTime().ToString();
+                    item.SubItems.Add(one.GetStrNumbers().ToString());
+                    item.SubItems.Add(one.GetExtraNumber().ToString());
+                    lstHistory.Items.Add(item);
+                }
+            }
         }
     }
 }

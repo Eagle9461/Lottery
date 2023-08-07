@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControl1 = new TabControl();
+            tabPane = new TabControl();
             tabDataEntry = new TabPage();
             btnSave = new Button();
             calendar = new MonthCalendar();
@@ -56,7 +56,7 @@
             selGameType = new ComboBox();
             tabCalculate = new TabPage();
             lstHistory = new ListView();
-            tabControl1.SuspendLayout();
+            tabPane.SuspendLayout();
             tabDataEntry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numDataExtra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numData6).BeginInit();
@@ -68,15 +68,16 @@
             tabCalculate.SuspendLayout();
             SuspendLayout();
             // 
-            // tabControl1
+            // tabPane
             // 
-            tabControl1.Controls.Add(tabDataEntry);
-            tabControl1.Controls.Add(tabCalculate);
-            tabControl1.Location = new Point(12, 12);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(865, 352);
-            tabControl1.TabIndex = 0;
+            tabPane.Controls.Add(tabDataEntry);
+            tabPane.Controls.Add(tabCalculate);
+            tabPane.Location = new Point(12, 12);
+            tabPane.Name = "tabPane";
+            tabPane.SelectedIndex = 0;
+            tabPane.Size = new Size(865, 352);
+            tabPane.TabIndex = 0;
+            tabPane.SelectedIndexChanged += tabPane_SelectedIndexChanged;
             // 
             // tabDataEntry
             // 
@@ -346,11 +347,11 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(889, 376);
-            Controls.Add(tabControl1);
+            Controls.Add(tabPane);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "MainForm";
             Text = "SelectLuckyNumber";
-            tabControl1.ResumeLayout(false);
+            tabPane.ResumeLayout(false);
             tabDataEntry.ResumeLayout(false);
             tabDataEntry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numDataExtra).EndInit();
@@ -366,7 +367,7 @@
 
         #endregion
 
-        private TabControl tabControl1;
+        private TabControl tabPane;
         private TabPage tabDataEntry;
         private Button btnSave;
         private MonthCalendar calendar;
