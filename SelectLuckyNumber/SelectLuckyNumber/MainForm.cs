@@ -80,7 +80,10 @@ namespace SelectLuckyNumber
         }
         private void saveToFile(OneData newData)
         {
-            string readText = File.ReadAllText(filePath);
+            string readText = "";
+            if (File.Exists(filePath)) {
+                readText = File.ReadAllText(filePath);
+            }
 
             File.WriteAllText(filePath, readText + "\n" + newData.ConvertToString());
         }
@@ -259,18 +262,26 @@ namespace SelectLuckyNumber
             Oper.MakeResultNumbers();
             int[][] result = Oper.GetResult();
 
+            int n = 0;
             for (int i = 0; i < result.Length; i++)
             {
                 if (result[i] != null)
                 {
+                    if (Environment.isDuplicate(result[i])) { continue; }
                     ListViewItem item = new ListViewItem();
-                    item.Text = (i + 1).ToString();
+                    item.Text = (++n).ToString();
                     int[] numbers = new int[5];
-                    numbers = result[i][new Range(0, 5)];
-                    item.SubItems.Add(Environment.ConvertArrayToString(numbers));
-                    item.SubItems.Add(result[i][5].ToString());
-                    //if (filterGameType == GameType.MegaMillions || filterGameType == GameType.PowerBall)
-                    //    item.SubItems.Add(one.GetExtraNumber().ToString());
+                    if (filterGameType == GameType.MegaMillions || filterGameType == GameType.PowerBall)
+                    {
+                        numbers = result[i][new Range(0, Environment.COUNT_OF_NUMBER[(int)filterGameType]-1)];
+                        item.SubItems.Add(Environment.ConvertArrayToString(numbers));
+                        item.SubItems.Add(result[i][Environment.COUNT_OF_NUMBER[(int)filterGameType]-1].ToString());
+                    }
+                    else
+                    {
+                        numbers = result[i][new Range(0, Environment.COUNT_OF_NUMBER[(int)filterGameType])];
+                        item.SubItems.Add(Environment.ConvertArrayToString(numbers));
+                    }
                     lstResult.Items.Add(item);
                 }
             }

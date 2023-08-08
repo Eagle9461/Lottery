@@ -133,7 +133,7 @@ namespace SelectLuckyNumber
             int SPAN_EXTRANUMBER = MAX_EXTRANUMBER - MIN_EXTRANUMBER + 1;
             for (int i = 0; i < table.Length; i++)
             {
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < digit_count-1; j++)
                 {
                     //MessageBox.Show(MIN_NUMBER.ToString());
                     if (table[i][j] < MIN_NUMBER) table[i][j] += SPAN_NUMBER;
@@ -141,13 +141,13 @@ namespace SelectLuckyNumber
                 }
                 if( gameType == GameType.MegaMillions || gameType == GameType.PowerBall)
                 {
-                    if (table[i][5] < MIN_NUMBER) table[i][5] += SPAN_EXTRANUMBER;
-                    if (table[i][5] > MAX_NUMBER) table[i][5] -= SPAN_EXTRANUMBER;
+                    if (table[i][digit_count - 1] < MIN_NUMBER) table[i][digit_count - 1] += SPAN_EXTRANUMBER;
+                    if (table[i][digit_count - 1] > MAX_NUMBER) table[i][digit_count - 1] -= SPAN_EXTRANUMBER;
                 } 
                 else
                 {
-                    if (table[i][5] < MIN_NUMBER) table[i][5] += SPAN_NUMBER;
-                    if (table[i][5] > MAX_NUMBER) table[i][5] -= SPAN_NUMBER;
+                    if (table[i][digit_count - 1] < MIN_NUMBER) table[i][digit_count - 1] += SPAN_NUMBER;
+                    if (table[i][digit_count - 1] > MAX_NUMBER) table[i][digit_count - 1] -= SPAN_NUMBER;
                 }
             }
         }

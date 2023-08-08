@@ -49,5 +49,16 @@ namespace SelectLuckyNumber
             }
             return str;
         }
+        public static bool isDuplicate(int[] numbers)
+        {
+            for(int i = 0; i < numbers.Length; i++)
+            {
+                for(int j = 0;j < numbers.Length; j++)
+                {
+                    if (numbers[i] == numbers[j] &&  i != j) { return true; }
+                }
+            }
+            return false;
+        }
     }
 }

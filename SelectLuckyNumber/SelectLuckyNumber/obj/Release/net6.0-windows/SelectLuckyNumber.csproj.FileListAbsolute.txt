@@ -1,0 +1,17 @@
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\bin\Release\net6.0-windows\SelectLuckyNumber.exe
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\bin\Release\net6.0-windows\SelectLuckyNumber.deps.json
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\bin\Release\net6.0-windows\SelectLuckyNumber.runtimeconfig.json
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\bin\Release\net6.0-windows\SelectLuckyNumber.dll
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\bin\Release\net6.0-windows\SelectLuckyNumber.pdb
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.csproj.AssemblyReference.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.MainForm.resources
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.csproj.GenerateResource.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.AssemblyInfoInputs.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.AssemblyInfo.cs
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.csproj.CoreCompileInputs.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.dll
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\refint\SelectLuckyNumber.dll
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.pdb
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\SelectLuckyNumber.genruntimeconfig.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net6.0-windows\ref\SelectLuckyNumber.dll
