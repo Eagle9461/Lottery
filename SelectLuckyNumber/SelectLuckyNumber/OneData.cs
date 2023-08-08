@@ -6,23 +6,6 @@ using System.Threading.Tasks;
 
 namespace SelectLuckyNumber
 {
-    enum ExtraTime
-    {
-        Morning,
-        Midday,
-        Evening,
-        Night
-    }
-    enum GameType 
-    {
-        Pick3,
-        Pick4,
-        Pick5,
-        Pick6,
-        MegaMillions,
-        PowerBall,
-    }
-
     internal class OneData
     {
         private GameType gameType;
@@ -45,9 +28,46 @@ namespace SelectLuckyNumber
         public string GetStrNumbers ()
         {
             string str = "";
-            foreach (int number in numbers)
+
+            switch (gameType)
             {
-                str += number; str += ", ";
+                case GameType.Pick3:
+                    for (int i = 0; i < 3; i++ )
+                    {
+                        str += numbers[i]; str += ", ";
+                    }
+                    break;
+                case GameType.Pick4:
+                    for (int i = 0; i < 4; i++)
+                    {
+                        str += numbers[i]; str += ", ";
+                    }
+                    break;
+                    break;
+                case GameType.Pick5:
+                    for (int i = 0; i < 5; i++)
+                    {
+                        str += numbers[i]; str += ", ";
+                    }
+                    break;
+                case GameType.Pick6:
+                    for (int i = 0; i < 6; i++)
+                    {
+                        str += numbers[i]; str += ", ";
+                    }
+                    break;
+                case GameType.MegaMillions:
+                    for (int i = 0; i < 5; i++)
+                    {
+                        str += numbers[i]; str += ", ";
+                    }
+                    break;
+                case GameType.PowerBall:
+                    for (int i = 0; i < 5; i++)
+                    {
+                        str += numbers[i]; str += ", ";
+                    }
+                    break;
             }
             return str;
         }

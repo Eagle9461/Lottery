@@ -57,11 +57,14 @@
             label1 = new Label();
             selGameType = new ComboBox();
             tabCalculate = new TabPage();
-            button1 = new Button();
+            label12 = new Label();
+            selGameTypeToCalculate = new ComboBox();
+            btnCalculate = new Button();
             groupBox4 = new GroupBox();
-            listView1 = new ListView();
+            lstResult = new ListView();
             groupBox3 = new GroupBox();
             lstHistory = new ListView();
+            btnClearResult = new Button();
             tabPane.SuspendLayout();
             tabDataEntry.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -370,7 +373,10 @@
             // 
             // tabCalculate
             // 
-            tabCalculate.Controls.Add(button1);
+            tabCalculate.Controls.Add(btnClearResult);
+            tabCalculate.Controls.Add(label12);
+            tabCalculate.Controls.Add(selGameTypeToCalculate);
+            tabCalculate.Controls.Add(btnCalculate);
             tabCalculate.Controls.Add(groupBox4);
             tabCalculate.Controls.Add(groupBox3);
             tabCalculate.Location = new Point(4, 24);
@@ -381,18 +387,37 @@
             tabCalculate.Text = "Get Lucky";
             tabCalculate.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // label12
             // 
-            button1.Location = new Point(664, 90);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Calculate";
-            button1.UseVisualStyleBackColor = true;
+            label12.AutoSize = true;
+            label12.Location = new Point(622, 177);
+            label12.Name = "label12";
+            label12.Size = new Size(71, 15);
+            label12.TabIndex = 13;
+            label12.Text = "Game Type :";
+            // 
+            // selGameTypeToCalculate
+            // 
+            selGameTypeToCalculate.FormattingEnabled = true;
+            selGameTypeToCalculate.Location = new Point(622, 198);
+            selGameTypeToCalculate.Name = "selGameTypeToCalculate";
+            selGameTypeToCalculate.Size = new Size(162, 23);
+            selGameTypeToCalculate.TabIndex = 12;
+            selGameTypeToCalculate.SelectedIndexChanged += selGameTypeToCalculate_SelectedIndexChanged;
+            // 
+            // btnCalculate
+            // 
+            btnCalculate.Location = new Point(654, 237);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(96, 23);
+            btnCalculate.TabIndex = 1;
+            btnCalculate.Text = "Calculate";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(listView1);
+            groupBox4.Controls.Add(lstResult);
             groupBox4.Location = new Point(310, 16);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(289, 290);
@@ -400,13 +425,13 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Suggested Combinations";
             // 
-            // listView1
+            // lstResult
             // 
-            listView1.Location = new Point(6, 23);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(277, 261);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
+            lstResult.Location = new Point(6, 23);
+            lstResult.Name = "lstResult";
+            lstResult.Size = new Size(277, 261);
+            lstResult.TabIndex = 0;
+            lstResult.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox3
             // 
@@ -425,6 +450,16 @@
             lstHistory.Size = new Size(277, 261);
             lstHistory.TabIndex = 0;
             lstHistory.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnClearResult
+            // 
+            btnClearResult.Location = new Point(654, 133);
+            btnClearResult.Name = "btnClearResult";
+            btnClearResult.Size = new Size(96, 23);
+            btnClearResult.TabIndex = 14;
+            btnClearResult.Text = "Clear Result";
+            btnClearResult.UseVisualStyleBackColor = true;
+            btnClearResult.Click += btnClearResult_Click;
             // 
             // MainForm
             // 
@@ -449,6 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)numData2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numData1).EndInit();
             tabCalculate.ResumeLayout(false);
+            tabCalculate.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             ResumeLayout(false);
@@ -486,9 +522,12 @@
         private ListView lstHistory;
         private GroupBox groupBox2;
         private GroupBox groupBox1;
-        private Button button1;
+        private Button btnCalculate;
         private GroupBox groupBox4;
-        private ListView listView1;
+        private ListView lstResult;
         private GroupBox groupBox3;
+        private Label label12;
+        private ComboBox selGameTypeToCalculate;
+        private Button btnClearResult;
     }
 }
