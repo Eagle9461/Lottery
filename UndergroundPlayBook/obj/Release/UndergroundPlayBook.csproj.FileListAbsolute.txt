@@ -7,3 +7,12 @@ E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.GenerateResourc
 E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.CoreCompileInputs.cache
 E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.exe
 E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.pdb
+E:\C#\Lottery\UndergroundPlayBook\bin\Release\UndergroundPlayBook.exe
+E:\C#\Lottery\UndergroundPlayBook\bin\Release\UndergroundPlayBook.pdb
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.AssemblyReference.cache
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.Main.resources
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.Properties.Resources.resources
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.GenerateResource.cache
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.CoreCompileInputs.cache
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.exe
+E:\C#\Lottery\UndergroundPlayBook\obj\Release\UndergroundPlayBook.pdb

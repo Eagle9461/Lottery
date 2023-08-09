@@ -16,6 +16,8 @@ namespace UndergroundPlayBook
 
         private GameType filterGameType = GameType.MegaMillions;
 
+        private GameType gameType;
+
         private List<OneData> history = new List<OneData> { };
 
         public Main()
@@ -147,6 +149,15 @@ namespace UndergroundPlayBook
 
         private void selGameType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            gameType = (GameType)selGameType.SelectedIndex;
+            numData1.Value = 1;
+            numData2.Value = 1;
+            numData3.Value = 1;
+            numData4.Value = 1;
+            numData5.Value = 1;
+            numData6.Value = 1;
+            numDataExtra.Value = 1;
+
             switch ((GameType)selGameType.SelectedIndex)
             {
                 case GameType.Pick3:
@@ -180,7 +191,7 @@ namespace UndergroundPlayBook
                     selExtraNumberRange.SelectedIndex = 8;
                     selNumbersRange.Enabled = true;
                     selExtraNumberRange.Enabled = false;
-                    selDrawingTime.Enabled = true;
+                    selDrawingTime.Enabled = false;
                     break;
                 case GameType.Pick6:
                     numData4.Enabled = true;
@@ -191,7 +202,7 @@ namespace UndergroundPlayBook
                     selExtraNumberRange.SelectedIndex = 8;
                     selNumbersRange.Enabled = false;
                     selExtraNumberRange.Enabled = false;
-                    selDrawingTime.Enabled = true;
+                    selDrawingTime.Enabled = false;
                     break;
                 case GameType.MegaMillions:
                     numData4.Enabled = true;
@@ -219,39 +230,43 @@ namespace UndergroundPlayBook
         }
         private bool isValid()
         {
-            if (numData1.Value > selNumbersRange.SelectedIndex + 1)
+            int min = Environment.MIN_MAX_NUMBERS[(int)gameType][0];
+            int max = Environment.MIN_MAX_NUMBERS[(int)gameType][1];
+            int emin = Environment.MIN_MAX_NUMBERS[(int)gameType][2];
+            int emax = Environment.MIN_MAX_NUMBERS[(int)gameType][3];
+            if (numData1.Value > max || numData1.Value < min)
             {
-                MessageBox.Show("Number 1 is Invalid.\n");
+                MessageBox.Show("Number 1 is Invalid. Must to be "+min+" to "+max+".\n");
                 return false;
             }
-            if (numData2.Value > selNumbersRange.SelectedIndex + 1)
+            if (numData2.Value > max || numData2.Value < min)
             {
-                MessageBox.Show("Number 2 is Invalid.\n");
+                MessageBox.Show("Number 2 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
             }
-            if (numData3.Value > selNumbersRange.SelectedIndex + 1)
+            if (numData3.Value > max || numData4.Value < min)
             {
-                MessageBox.Show("Number 3 is Invalid.\n");
+                MessageBox.Show("Number 3 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
             }
-            if (numData4.Value > selNumbersRange.SelectedIndex + 1)
+            if (numData4.Value > max || numData4.Value < min)
             {
-                MessageBox.Show("Number 4 is Invalid.\n");
+                MessageBox.Show("Number 4 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
             }
-            if (numData5.Value > selNumbersRange.SelectedIndex + 1)
+            if (numData5.Value > max || numData5.Value < min)
             {
-                MessageBox.Show("Number 5 is Invalid.\n");
+                MessageBox.Show("Number 5 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
             }
-            if (numData6.Value > selNumbersRange.SelectedIndex + 1)
+            if (numData6.Value > max || numData6.Value < min)
             {
-                MessageBox.Show("Number 6 is Invalid.\n");
+                MessageBox.Show("Number 6 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
             }
-            if (numDataExtra.Value > selExtraNumberRange.SelectedIndex + 1)
+            if (numDataExtra.Value > emax || numDataExtra.Value < emin)
             {
-                MessageBox.Show("Extra Number must be less than the Extra Number Range.\n");
+                MessageBox.Show("Extra Number must be "+emin+" to "+emax+".\n");
                 return false;
             }
             return true;

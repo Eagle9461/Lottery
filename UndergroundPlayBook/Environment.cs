@@ -28,8 +28,8 @@ namespace UndergroundPlayBook
     {
         public static int[][] MIN_MAX_NUMBERS = new int[][]
         {
-            new int[] { 1, 9, 1, 9 },
-            new int[] { 1, 9, 1, 9 },
+            new int[] { 0, 9, 0, 9 },
+            new int[] { 0, 9, 0, 9 },
             new int[] { 1, 49, 1, 9 },
             new int[] { 1, 46, 0, 0 },
             new int[] { 1, 70, 1, 25 },
