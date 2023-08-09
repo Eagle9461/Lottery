@@ -1,0 +1,7 @@
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.csproj.AssemblyReference.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.MainForm.resources
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.csproj.GenerateResource.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.AssemblyInfoInputs.cache
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.AssemblyInfo.cs
+E:\C#\Lottery\SelectLuckyNumber\SelectLuckyNumber\obj\Release\net5.0-windows\SelectLuckyNumber.csproj.CoreCompileInputs.cache

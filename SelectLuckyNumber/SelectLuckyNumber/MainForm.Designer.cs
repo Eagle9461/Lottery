@@ -57,6 +57,7 @@
             label1 = new Label();
             selGameType = new ComboBox();
             tabCalculate = new TabPage();
+            btnClearResult = new Button();
             label12 = new Label();
             selGameTypeToCalculate = new ComboBox();
             btnCalculate = new Button();
@@ -64,7 +65,6 @@
             lstResult = new ListView();
             groupBox3 = new GroupBox();
             lstHistory = new ListView();
-            btnClearResult = new Button();
             tabPane.SuspendLayout();
             tabDataEntry.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -387,6 +387,16 @@
             tabCalculate.Text = "Get Lucky";
             tabCalculate.UseVisualStyleBackColor = true;
             // 
+            // btnClearResult
+            // 
+            btnClearResult.Location = new Point(654, 133);
+            btnClearResult.Name = "btnClearResult";
+            btnClearResult.Size = new Size(96, 23);
+            btnClearResult.TabIndex = 14;
+            btnClearResult.Text = "Clear Result";
+            btnClearResult.UseVisualStyleBackColor = true;
+            btnClearResult.Click += btnClearResult_Click;
+            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -451,16 +461,6 @@
             lstHistory.TabIndex = 0;
             lstHistory.UseCompatibleStateImageBehavior = false;
             // 
-            // btnClearResult
-            // 
-            btnClearResult.Location = new Point(654, 133);
-            btnClearResult.Name = "btnClearResult";
-            btnClearResult.Size = new Size(96, 23);
-            btnClearResult.TabIndex = 14;
-            btnClearResult.Text = "Clear Result";
-            btnClearResult.UseVisualStyleBackColor = true;
-            btnClearResult.Click += btnClearResult_Click;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -469,7 +469,7 @@
             Controls.Add(tabPane);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "MainForm";
-            Text = "SelectLuckyNumber";
+            Text = "Underground PlayBook";
             tabPane.ResumeLayout(false);
             tabDataEntry.ResumeLayout(false);
             groupBox2.ResumeLayout(false);

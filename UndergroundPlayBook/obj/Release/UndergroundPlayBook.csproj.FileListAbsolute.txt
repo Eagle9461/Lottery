@@ -1,0 +1,9 @@
+E:\C#\UndergroundPlayBook\bin\Release\UndergroundPlayBook.exe
+E:\C#\UndergroundPlayBook\bin\Release\UndergroundPlayBook.pdb
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.AssemblyReference.cache
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.Main.resources
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.Properties.Resources.resources
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.GenerateResource.cache
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.csproj.CoreCompileInputs.cache
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.exe
+E:\C#\UndergroundPlayBook\obj\Release\UndergroundPlayBook.pdb

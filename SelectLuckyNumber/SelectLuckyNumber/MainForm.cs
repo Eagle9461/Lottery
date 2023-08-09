@@ -81,7 +81,8 @@ namespace SelectLuckyNumber
         private void saveToFile(OneData newData)
         {
             string readText = "";
-            if (File.Exists(filePath)) {
+            if (File.Exists(filePath))
+            {
                 readText = File.ReadAllText(filePath);
             }
 
@@ -273,9 +274,9 @@ namespace SelectLuckyNumber
                     int[] numbers = new int[5];
                     if (filterGameType == GameType.MegaMillions || filterGameType == GameType.PowerBall)
                     {
-                        numbers = result[i][new Range(0, Environment.COUNT_OF_NUMBER[(int)filterGameType]-1)];
+                        numbers = result[i][new Range(0, Environment.COUNT_OF_NUMBER[(int)filterGameType] - 1)];
                         item.SubItems.Add(Environment.ConvertArrayToString(numbers));
-                        item.SubItems.Add(result[i][Environment.COUNT_OF_NUMBER[(int)filterGameType]-1].ToString());
+                        item.SubItems.Add(result[i][Environment.COUNT_OF_NUMBER[(int)filterGameType] - 1].ToString());
                     }
                     else
                     {
