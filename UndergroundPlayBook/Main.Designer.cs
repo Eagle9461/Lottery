@@ -43,13 +43,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numDataExtra = new System.Windows.Forms.NumericUpDown();
-            this.numData6 = new System.Windows.Forms.NumericUpDown();
-            this.numData5 = new System.Windows.Forms.NumericUpDown();
-            this.numData4 = new System.Windows.Forms.NumericUpDown();
-            this.numData3 = new System.Windows.Forms.NumericUpDown();
-            this.numData2 = new System.Windows.Forms.NumericUpDown();
             this.numData1 = new System.Windows.Forms.NumericUpDown();
+            this.numData2 = new System.Windows.Forms.NumericUpDown();
+            this.numData3 = new System.Windows.Forms.NumericUpDown();
+            this.numData4 = new System.Windows.Forms.NumericUpDown();
+            this.numData5 = new System.Windows.Forms.NumericUpDown();
+            this.numData6 = new System.Windows.Forms.NumericUpDown();
+            this.numDataExtra = new System.Windows.Forms.NumericUpDown();
             this.selExtraNumberRange = new System.Windows.Forms.ComboBox();
             this.selNumbersRange = new System.Windows.Forms.ComboBox();
             this.selGameType = new System.Windows.Forms.ComboBox();
@@ -65,17 +65,18 @@
             this.lstResult = new System.Windows.Forms.ListView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lstHistory = new System.Windows.Forms.ListView();
+            this.btnDeleteHistory = new System.Windows.Forms.Button();
             this.tabPane.SuspendLayout();
             this.tabDataEntry.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDataExtra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numData1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDataExtra)).BeginInit();
             this.tabCalculate.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -160,13 +161,13 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.numDataExtra);
-            this.groupBox1.Controls.Add(this.numData6);
-            this.groupBox1.Controls.Add(this.numData5);
-            this.groupBox1.Controls.Add(this.numData4);
-            this.groupBox1.Controls.Add(this.numData3);
-            this.groupBox1.Controls.Add(this.numData2);
             this.groupBox1.Controls.Add(this.numData1);
+            this.groupBox1.Controls.Add(this.numData2);
+            this.groupBox1.Controls.Add(this.numData3);
+            this.groupBox1.Controls.Add(this.numData4);
+            this.groupBox1.Controls.Add(this.numData5);
+            this.groupBox1.Controls.Add(this.numData6);
+            this.groupBox1.Controls.Add(this.numDataExtra);
             this.groupBox1.Controls.Add(this.selExtraNumberRange);
             this.groupBox1.Controls.Add(this.selNumbersRange);
             this.groupBox1.Controls.Add(this.selGameType);
@@ -243,123 +244,17 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Num 1 :";
             // 
-            // numDataExtra
-            // 
-            this.numDataExtra.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numDataExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDataExtra.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numDataExtra.Location = new System.Drawing.Point(446, 149);
-            this.numDataExtra.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numDataExtra.Name = "numDataExtra";
-            this.numDataExtra.Size = new System.Drawing.Size(65, 47);
-            this.numDataExtra.TabIndex = 2;
-            this.numDataExtra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numDataExtra.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numData6
-            // 
-            this.numData6.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numData6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numData6.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numData6.Location = new System.Drawing.Point(375, 149);
-            this.numData6.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numData6.Name = "numData6";
-            this.numData6.Size = new System.Drawing.Size(65, 47);
-            this.numData6.TabIndex = 2;
-            this.numData6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numData6.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numData5
-            // 
-            this.numData5.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numData5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numData5.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numData5.Location = new System.Drawing.Point(304, 149);
-            this.numData5.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numData5.Name = "numData5";
-            this.numData5.Size = new System.Drawing.Size(65, 47);
-            this.numData5.TabIndex = 2;
-            this.numData5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numData5.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numData4
-            // 
-            this.numData4.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numData4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numData4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numData4.Location = new System.Drawing.Point(233, 149);
-            this.numData4.Name = "numData4";
-            this.numData4.Size = new System.Drawing.Size(65, 47);
-            this.numData4.TabIndex = 2;
-            this.numData4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numData4.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numData3
-            // 
-            this.numData3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numData3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numData3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numData3.Location = new System.Drawing.Point(162, 149);
-            this.numData3.Name = "numData3";
-            this.numData3.Size = new System.Drawing.Size(65, 47);
-            this.numData3.TabIndex = 2;
-            this.numData3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numData3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numData2
-            // 
-            this.numData2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.numData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numData2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numData2.Location = new System.Drawing.Point(91, 149);
-            this.numData2.Name = "numData2";
-            this.numData2.Size = new System.Drawing.Size(65, 47);
-            this.numData2.TabIndex = 2;
-            this.numData2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numData2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // numData1
             // 
             this.numData1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.numData1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numData1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.numData1.Location = new System.Drawing.Point(20, 149);
+            this.numData1.Location = new System.Drawing.Point(23, 149);
+            this.numData1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numData1.Name = "numData1";
             this.numData1.Size = new System.Drawing.Size(65, 47);
             this.numData1.TabIndex = 2;
@@ -369,6 +264,119 @@
             0,
             0,
             0});
+            this.numData1.Enter += new System.EventHandler(this.numData1_Enter);
+            // 
+            // numData2
+            // 
+            this.numData2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.numData2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numData2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.numData2.Location = new System.Drawing.Point(94, 149);
+            this.numData2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData2.Name = "numData2";
+            this.numData2.Size = new System.Drawing.Size(65, 47);
+            this.numData2.TabIndex = 2;
+            this.numData2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numData2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData2.Enter += new System.EventHandler(this.numData2_Enter);
+            // 
+            // numData3
+            // 
+            this.numData3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.numData3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numData3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.numData3.Location = new System.Drawing.Point(165, 149);
+            this.numData3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData3.Name = "numData3";
+            this.numData3.Size = new System.Drawing.Size(65, 47);
+            this.numData3.TabIndex = 2;
+            this.numData3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numData3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData3.Enter += new System.EventHandler(this.numData3_Enter);
+            // 
+            // numData4
+            // 
+            this.numData4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.numData4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numData4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.numData4.Location = new System.Drawing.Point(236, 149);
+            this.numData4.Name = "numData4";
+            this.numData4.Size = new System.Drawing.Size(65, 47);
+            this.numData4.TabIndex = 2;
+            this.numData4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numData4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData4.Enter += new System.EventHandler(this.numData4_Enter);
+            // 
+            // numData5
+            // 
+            this.numData5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.numData5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numData5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.numData5.Location = new System.Drawing.Point(307, 149);
+            this.numData5.Name = "numData5";
+            this.numData5.Size = new System.Drawing.Size(65, 47);
+            this.numData5.TabIndex = 2;
+            this.numData5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numData5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData5.Enter += new System.EventHandler(this.numData5_Enter);
+            // 
+            // numData6
+            // 
+            this.numData6.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.numData6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numData6.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.numData6.Location = new System.Drawing.Point(378, 149);
+            this.numData6.Name = "numData6";
+            this.numData6.Size = new System.Drawing.Size(65, 47);
+            this.numData6.TabIndex = 2;
+            this.numData6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numData6.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numData6.Enter += new System.EventHandler(this.numData6_Enter);
+            // 
+            // numDataExtra
+            // 
+            this.numDataExtra.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.numDataExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDataExtra.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.numDataExtra.Location = new System.Drawing.Point(449, 149);
+            this.numDataExtra.Name = "numDataExtra";
+            this.numDataExtra.Size = new System.Drawing.Size(65, 47);
+            this.numDataExtra.TabIndex = 2;
+            this.numDataExtra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numDataExtra.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numDataExtra.Enter += new System.EventHandler(this.numDataExtra_Enter);
             // 
             // selExtraNumberRange
             // 
@@ -377,6 +385,7 @@
             this.selExtraNumberRange.Name = "selExtraNumberRange";
             this.selExtraNumberRange.Size = new System.Drawing.Size(202, 21);
             this.selExtraNumberRange.TabIndex = 1;
+            this.selExtraNumberRange.SelectedIndexChanged += new System.EventHandler(this.selExtraNumberRange_SelectedIndexChanged);
             // 
             // selNumbersRange
             // 
@@ -385,6 +394,7 @@
             this.selNumbersRange.Name = "selNumbersRange";
             this.selNumbersRange.Size = new System.Drawing.Size(202, 21);
             this.selNumbersRange.TabIndex = 1;
+            this.selNumbersRange.SelectedIndexChanged += new System.EventHandler(this.selNumbersRange_SelectedIndexChanged);
             // 
             // selGameType
             // 
@@ -427,13 +437,14 @@
             this.tabCalculate.Controls.Add(this.selGameTypeToCalculate);
             this.tabCalculate.Controls.Add(this.label12);
             this.tabCalculate.Controls.Add(this.btnCalculate);
+            this.tabCalculate.Controls.Add(this.btnDeleteHistory);
             this.tabCalculate.Controls.Add(this.btnClearResult);
             this.tabCalculate.Controls.Add(this.groupBox4);
             this.tabCalculate.Controls.Add(this.groupBox3);
             this.tabCalculate.Location = new System.Drawing.Point(4, 22);
             this.tabCalculate.Name = "tabCalculate";
             this.tabCalculate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCalculate.Size = new System.Drawing.Size(839, 360);
+            this.tabCalculate.Size = new System.Drawing.Size(816, 360);
             this.tabCalculate.TabIndex = 1;
             this.tabCalculate.Text = "Results";
             this.tabCalculate.UseVisualStyleBackColor = true;
@@ -514,6 +525,16 @@
             this.lstHistory.TabIndex = 0;
             this.lstHistory.UseCompatibleStateImageBehavior = false;
             // 
+            // btnDeleteHistory
+            // 
+            this.btnDeleteHistory.Location = new System.Drawing.Point(685, 150);
+            this.btnDeleteHistory.Name = "btnDeleteHistory";
+            this.btnDeleteHistory.Size = new System.Drawing.Size(101, 23);
+            this.btnDeleteHistory.TabIndex = 1;
+            this.btnDeleteHistory.Text = "Delete History";
+            this.btnDeleteHistory.UseVisualStyleBackColor = true;
+            this.btnDeleteHistory.Click += new System.EventHandler(this.btnDeleteHistory_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,13 +549,13 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDataExtra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numData2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numData1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numData6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDataExtra)).EndInit();
             this.tabCalculate.ResumeLayout(false);
             this.tabCalculate.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -560,13 +581,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numDataExtra;
-        private System.Windows.Forms.NumericUpDown numData6;
-        private System.Windows.Forms.NumericUpDown numData5;
-        private System.Windows.Forms.NumericUpDown numData4;
-        private System.Windows.Forms.NumericUpDown numData3;
-        private System.Windows.Forms.NumericUpDown numData2;
         private System.Windows.Forms.NumericUpDown numData1;
+        private System.Windows.Forms.NumericUpDown numData2;
+        private System.Windows.Forms.NumericUpDown numData3;
+        private System.Windows.Forms.NumericUpDown numData4;
+        private System.Windows.Forms.NumericUpDown numData5;
+        private System.Windows.Forms.NumericUpDown numData6;
+        private System.Windows.Forms.NumericUpDown numDataExtra;
         private System.Windows.Forms.ComboBox selExtraNumberRange;
         private System.Windows.Forms.ComboBox selNumbersRange;
         private System.Windows.Forms.ComboBox selGameType;
@@ -582,5 +603,6 @@
         private System.Windows.Forms.ListView lstResult;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListView lstHistory;
+        private System.Windows.Forms.Button btnDeleteHistory;
     }
 }

@@ -20,6 +20,8 @@ namespace UndergroundPlayBook
 
         private List<OneData> history = new List<OneData> { };
 
+        private int min, max, emin, emax;
+
         public Main()
         {
             InitializeComponent();
@@ -89,7 +91,7 @@ namespace UndergroundPlayBook
             newData.SetDateTime(calendar.SelectionStart);
             newData.SetExtraTime((ExtraTime)selDrawingTime.SelectedIndex);
             newData.SetNumbers(numbers);
-            newData.SetExtraNumber((int)numDataExtra.Value);
+            newData.SetExtraNumber((int)numData1.Value);
 
             saveToFile(newData);
             //MessageBox.Show(newData.GetNumbers()[3].ToString());
@@ -158,6 +160,11 @@ namespace UndergroundPlayBook
             numData6.Value = 1;
             numDataExtra.Value = 1;
 
+            min = Environment.MIN_MAX_NUMBERS[(int)gameType][0];
+            max = Environment.MIN_MAX_NUMBERS[(int)gameType][1];
+            emin = Environment.MIN_MAX_NUMBERS[(int)gameType][2];
+            emax = Environment.MIN_MAX_NUMBERS[(int)gameType][3];
+
             switch ((GameType)selGameType.SelectedIndex)
             {
                 case GameType.Pick3:
@@ -199,8 +206,8 @@ namespace UndergroundPlayBook
                     numData6.Enabled = true;
                     numDataExtra.Enabled = false;
                     selNumbersRange.SelectedIndex = 45;
-                    selExtraNumberRange.SelectedIndex = 8;
-                    selNumbersRange.Enabled = false;
+                    selExtraNumberRange.SelectedIndex = 0;
+                    selNumbersRange.Enabled = true;
                     selExtraNumberRange.Enabled = false;
                     selDrawingTime.Enabled = false;
                     break;
@@ -230,10 +237,7 @@ namespace UndergroundPlayBook
         }
         private bool isValid()
         {
-            int min = Environment.MIN_MAX_NUMBERS[(int)gameType][0];
-            int max = Environment.MIN_MAX_NUMBERS[(int)gameType][1];
-            int emin = Environment.MIN_MAX_NUMBERS[(int)gameType][2];
-            int emax = Environment.MIN_MAX_NUMBERS[(int)gameType][3];
+
             if (numData1.Value > max || numData1.Value < min)
             {
                 MessageBox.Show("Number 1 is Invalid. Must to be "+min+" to "+max+".\n");
@@ -244,7 +248,7 @@ namespace UndergroundPlayBook
                 MessageBox.Show("Number 2 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
             }
-            if (numData3.Value > max || numData4.Value < min)
+            if (numData3.Value > max || numData3.Value < min)
             {
                 MessageBox.Show("Number 3 is Invalid. Must to be " + min + " to " + max + ".\n");
                 return false;
@@ -272,6 +276,56 @@ namespace UndergroundPlayBook
             return true;
         }
 
+        private void selNumbersRange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            max = selNumbersRange.SelectedIndex + 1;
+        }
+
+        private void selExtraNumberRange_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            emax = selExtraNumberRange.SelectedIndex + 1;
+        }
+
+        private void btnDeleteHistory_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(filePath, "");
+            lstHistory.Items.Clear();
+        }
+        private void numData1_Enter(object sender, EventArgs e)
+        {
+            numData1.Select(0, numData1.ToString().Length);
+        }
+
+        private void numData2_Enter(object sender, EventArgs e)
+        {
+            numData2.Select(0, numData2.ToString().Length);
+        }
+
+
+        private void numData3_Enter(object sender, EventArgs e)
+        {
+            numData3.Select(0, numData3.ToString().Length);
+        }
+
+        private void numData4_Enter(object sender, EventArgs e)
+        {
+            numData4.Select(0, numData4.ToString().Length);
+        }
+
+        private void numData5_Enter(object sender, EventArgs e)
+        {
+            numData5.Select(0, numData5.ToString().Length);
+        }
+
+        private void numData6_Enter(object sender, EventArgs e)
+        {
+            numData6.Select(0, numData6.ToString().Length);
+        }
+
+        private void numDataExtra_Enter(object sender, EventArgs e)
+        {
+            numDataExtra.Select(0, numDataExtra.ToString().Length);
+        }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {

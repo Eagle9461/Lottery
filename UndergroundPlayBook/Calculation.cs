@@ -44,10 +44,10 @@ namespace UndergroundPlayBook
                 MessageBox.Show("Errors Occured\n History must be more than 5.\n");
                 return false;
             }
-            for(int i = 0; i < 5; i++)
+            for(int i = datas.Count-5; i < datas.Count; i++)
             {
-                table[i] = datas[i].GetNumbers();
-                table[i][5] = datas[i].GetExtraNumber();
+                table[i+5-datas.Count] = datas[i].GetNumbers();
+                table[i+5-datas.Count][5] = datas[i].GetExtraNumber();
             }
             return true;
         }
